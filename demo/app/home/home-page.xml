@@ -1,0 +1,29 @@
+<Page
+    navigatingTo="onNavigatingTo"
+    xmlns="http://www.nativescript.org/tns.xsd"
+    xmlns:maps="nativescript-google-maps-sdk">
+
+    <ActionBar>
+        <Label text="Home"></Label>
+    </ActionBar>
+
+    <GridLayout>
+        <!-- Add your page content here -->
+        <maps:mapView
+            latitude="{{ latitude }}"
+            longitude="{{ longitude }}"
+            zoom="{{ zoom }}"
+            bearing="{{ bearing }}"
+            tilt="{{ tilt }}"
+            mapAnimationsEnabled="{{ mapAnimationsEnabled }}"
+            padding="{{ padding }}"
+            mapReady="onMapReady"
+            markerSelect="onMarkerSelect"
+            markerBeginDragging="onMarkerBeginDragging"
+            markerEndDragging="onMarkerEndDragging"
+            markerDrag="onMarkerDrag"
+            cameraChanged="onCameraChanged"
+            cameraMove="onCameraMove"
+        />
+    </GridLayout>
+</Page>
